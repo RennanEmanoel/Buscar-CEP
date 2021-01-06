@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Css-->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!--Icone-->
+    <link rel="shortcut icon" href="./img/icone.png">
+    <!--Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <title>CEP</title>
+</head>
+<body onload="iniciar()">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a href="#" class="nav-brand titulo" style="font-size: 34px;">Consultar CEP</a>
+
+            <form class="d-flex">
+                <input type="search" id="numer" class="form-control me-2" placeholder="00000-000" aria-label="Buscar" >
+                <button class="btn btn-outline-success" onclick="buscar()" type="button">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <div class="container" >
+        <table class="table" id="tabela" style="margin-top: 60px;">
+            <thead>
+                <tr>
+                    <td>CEP</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Logradouro</td>
+                    <td class="response" id="01"></td>
+                </tr>
+                <tr>
+                    <td>Bairro</td>
+                    <td class="response" id="02"></td>
+                </tr>
+                <tr>
+                    <td>Cidade</td>
+                    <td class="response" id="03"></td>
+                </tr>
+                <tr>
+                    <td>UF</td>
+                    <td class="response" id="04"></td>
+                </tr>
+                <tr>
+                    <td>DDD</td>
+                    <td class="response" id="05"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="jquery/jquery.2.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+</body>
+</html>
